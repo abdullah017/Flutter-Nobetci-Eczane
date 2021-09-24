@@ -1,0 +1,36 @@
+name: nobetci_eczane
+description: A new Flutter project.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons:
+  get:
+  get_storage:
+  freezed_annotation:
+  dartz:
+  json_serializable:
+  rxdart:
+  dio:
+
+dev_dependencies:
+  build_runner: 
+  freezed: 
+  
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+
+  assets:
+    - assets/images/
+    - assets/jsons/
+  

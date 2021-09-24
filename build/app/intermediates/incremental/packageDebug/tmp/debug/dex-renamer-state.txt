@@ -1,0 +1,4 @@
+#Fri Sep 24 17:49:54 TRT 2021
+base.0=/home/abdullah/Genel/vs_code/nobetci_eczane/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
