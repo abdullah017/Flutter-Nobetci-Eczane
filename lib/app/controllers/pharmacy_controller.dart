@@ -1,27 +1,32 @@
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:nobetci_eczane/app/data/models/pharmacy_model.dart';
+
 import 'package:nobetci_eczane/app/data/provider/local/get_pharmacy.dart';
 
 class PharmacyController extends GetxController {
   final datacount = GetStorage();
-  RxList<Result>? pharmacyList;
-  bool isLoading = true;
+  RxList pharmacyList = [].obs;
+  RxBool isLoading = false.obs;
 
   @override
   void onInit() {
     PharmacyProvider().getPharmacyList(
       onSuccess: (data) {
-        pharmacyList!.addAll(data);
-        isLoading = false;
+        showLoading();
+        pharmacyList.addAll(data);
+        hideLoading();
       },
       il: datacount.read("il"),
       ilce: datacount.read("ilce"),
       onError: (error) {
-        isLoading = false;
+        showLoading();
         print("HATA YAKALANDI **** $error");
       },
     );
     super.onInit();
   }
+
+  void showLoading() => isLoading.toggle();
+
+  void hideLoading() => isLoading.toggle();
 }

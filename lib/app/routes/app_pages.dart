@@ -1,8 +1,9 @@
 
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
-import 'package:nobetci_eczane/app/ui/pages/Pharmacy/pharmacy.dart';
+
 import 'package:nobetci_eczane/app/ui/pages/district_page/districts.dart';
+import 'package:nobetci_eczane/app/ui/pages/pharmacy_page/pharmacy.dart';
 
 import '../bindings/home_binding.dart';
 import '../ui/pages/home_page/home_page.dart';

@@ -12,14 +12,20 @@ class PharmacyPage extends GetView<PharmacyController> {
     return MainLayoutView(
         child: Center(
       child: Obx(
-        () => _controller.isLoading
-            ? ListView.builder(
+        () => _controller.isLoading.isTrue
+            ? CircularProgressIndicator()
+            : ListView.builder(
                 shrinkWrap: true,
-                itemCount: _controller.pharmacyList!.length,
+                itemCount: _controller.pharmacyList.length,
                 itemBuilder: (BuildContext context, index) {
-                  return Text(_controller.pharmacyList![index].name.toString());
-                })
-            : CircularProgressIndicator(),
+                  return ListTile(
+                    leading: Icon(Icons.person),
+                    title:
+                        Text(_controller.pharmacyList[index].name.toString()),
+                    subtitle: Text(
+                        _controller.pharmacyList[index].address.toString()),
+                  );
+                }),
       ),
     ));
   }
