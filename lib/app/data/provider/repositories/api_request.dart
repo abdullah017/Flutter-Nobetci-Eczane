@@ -8,7 +8,7 @@ class ApiRequest {
 
   Dio _dio() {
     return Dio(BaseOptions(headers: {
-      'Authorization': 'apikey 489xujAOeE4I91bi4KY1Tb:5YFKt91upfbqohlOPA8EJU'
+      'Authorization': 'YOUR API KEY OR BEARER TOKEN'
     }));
   }
 
